@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Confortaa" rel="stylesheet">
+    <link rel="icon" href="{% static 'imagens/logo_loteria.png' %}">
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body background="{% static 'imagens/background.jpg'  %}" >
+    <div class="login" >
+        <img src="{% static 'imagens/user.png' %}" class="usuario" width="80" height="60" alt="">
+        <h1>Login</h1> 
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <p>Usuários</p>
+            <input type="text" name="usuario" placeholder="Insira seu nome de usuário">
+            <p> Senha </p>
+            <input type="password" name="senha" placeholder="Insira sua senha">
+            <input type="submit" name="" value="Login">
+            <a href="#">Esqueceu sua senha?</a><br>
+            <a href="{% url 'cadastro' %}">ainda não possui uma conta?</a><br>
+
+        </form>
+
+
+    </div>
+    
+</body>
+</html>

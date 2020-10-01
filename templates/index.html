@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+    <title>Looteria</title>
+    <link rel="icon" href="{% static 'imagens/logo_loteria.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.theme.css' %}">
+</head>
+<body>
+    {% include 'partials/menu.html' %}
+
+    <main>
+         
+        <div class="banner">
+            <div class="gallery autoplay items-3">
+                <div id="item-1" class="control-operator"> </div>
+                <div id="item-2" class="control-operator"> </div>
+                <div id="item-3" class="control-operator"> </div>
+
+                <figure class="item">
+                    <h1><img src="{% static 'imagens/banner1.png' %}"></h1>
+                </figure>
+                <figure class="item">
+                    <h1><img src="{% static 'imagens/banner2.png' %}"></h1>
+                </figure>
+                <figure class="item">
+                    <h1><img src="{% static 'imagens/banner3.png' %}"></h1>
+                </figure>
+
+                <div class="controls">
+                    <a href="#item-1" class="control-button">.</a>
+                    <a href="#item-2" class="control-button">.</a>
+                    <a href="#item-3" class="control-button">.</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1> RIFAS EM DESTAQUE  </h1>
+            <ul class="produtos">
+                {% if fichas %}
+                {% for ficha in fichas %}
+                <li>                  
+                    <a href="#"><img class="logo_armas" src="{{ ficha.link }}"></a>
+                    <p>R$ {{ ficha.valor }}</p>
+                </li>
+                {% endfor %}
+                {% else %}
+                {% endif%}
+              
+               
+            </ul>
+        </div>
+        
+
+        
+        
+
+
+
+
+    </main>
+    {% endblock %}
+

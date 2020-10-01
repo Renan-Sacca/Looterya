@@ -1,0 +1,113 @@
+body{
+  background: linear-gradient( black,darkblue);
+  font-family: 'Ranchers', cursive;
+
+}
+header {
+  background: linear-gradient(#FFFFFF,#555555);
+  /* to right,red, blue,purple */
+  padding: 12px 0;
+  border-radius: 0 0 25px 25px;
+
+
+}
+
+.navbar {
+    width: 100%;
+    overflow: hidden;
+   
+}
+
+.logo {
+  width: 90px;
+  float: left;
+  padding: 0 20px;
+}
+
+.itens_meio {
+  float: left;
+  text-align: center;
+  margin: 0 0 0 50px ;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+.itens_meio:nth-child(3){
+  margin-left: 225px ;
+}
+.itens_meio:last-child{
+  float: right;
+  margin-right: -10;
+}
+
+.itens_meio:hover {
+  background-color: #111
+}
+
+
+.itens_meio_logado {
+  float: left;
+  text-align: center;
+  margin: 0 0 0 50px ;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+.itens_meio_logado:nth-child(3){
+  margin-left: 100px ;
+}
+.itens_meio_logado:last-child{
+  float: right;
+  margin-right: -10;
+}
+
+.itens_meio_logado:hover {
+  background-color: #111
+}
+.usuario_logo {
+    width: 90px;
+    float: right;
+    padding: 0 20px;
+
+}
+
+.usuario_logo:hover {
+    transform: scale(1.1);
+    background-color: #111
+
+}
+
+.banner{
+  padding: 15px 5% 20px 5%;
+}
+h1 {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.produtos li {
+  background: linear-gradient(#FFFFFF,#555555);
+	display: inline-block;
+	text-align: center;
+	width: 15%;
+	vertical-align: top;
+	margin: 20px 20px 20px 35px;
+	padding: 30px 30px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.logo_armas {
+  width: 100px;
+  float: right;
+  padding: 0 20px;
+
+}
+
+

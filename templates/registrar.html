@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cadastro - Looteria</title>
+		<link rel="icon" href="{% static 'imagens/logo_loteria.png' %}">
+    	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+		<link rel="stylesheet" href="{% static 'css/registrar.css' %}">
+	</head>
+<body>
+		{% include 'partials/menu.html' %}
+		<main>
+			<form action="{% url 'cadastro' %}" method="POST">
+				{% csrf_token %}
+				<label for="username">Username</label>
+				<input type="text" id="username" class="input-padrao" name="username" required>
+
+				<label for="nome">Nome</label>
+				<input type="text" id="nome" class="input-padrao" name="nome" required>
+
+				<label for="sobrenome">Sobrenome</label>
+				<input type="text" id="sobrenome" class="input-padrao" name="sobrenome" required>
+
+								
+				<label for="email">Email</label>
+				<input name="email" type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+				<label for="telefone">Telefone</label>
+				<input name="telefone" type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<fieldset>
+					<legend>Sexo?</legend>
+					<label  for="Masculino"><input type="radio" name="sexo" value="masculino" id="radio-masculino"> Masculino</label>
+					<label  for="Feminino"><input type="radio" name="sexo" value="feminino" id="radio-telefone"> Feminino</label>
+				</fieldset>
+				<label for="senha">Senha</label>
+				<input type="password" id="senha" class="input-padrao" name="senha" required>
+				<label for="senha2">Confirme sua senha</label>
+				<input type="password" id="senha2" class="input-padrao" name="senha2" required>
+
+				<!--<fieldset>
+					<legend>Qual horário prefere ser atendido?</legend>
+					<select>
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>s
+					</select>
+				</fieldset> -->
+
+				<input type="submit" value="Cadastrar" class="enviar">
+			</form>
+
+		</main>
+
+		<footer>
+		</footer>
+	</body>
+</html>
